@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Моя визитка</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>[Твоё имя]</h1>
+            <nav>
+                <ul>
+                    <li><a href="{{ url_for('home') }}">Главная</a></li>
+                    <li><a href="{{ url_for('blog') }}">Блог</a></li>
+                    <li><a href="{{ url_for('goals') }}">Цели</a></li> <!-- Например, "Impossible List" -->
+                    <li><a href="{{ url_for('cv') }}">Резюме</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div id="large-header">
+        <canvas id="demo-canvas"></canvas>
+    </div>
+    <div class="content">
+        <h1>Welcome to My Flask App</h1>
+        <p>This is an example of an animated background.</p>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
+    <script src="{{ url_for('static', filename='background.js') }}"></script>
+</body>
+</html>
